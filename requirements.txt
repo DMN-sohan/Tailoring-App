@@ -1,0 +1,6 @@
+# Required for both reset scripts (REST API approach)
+requests>=2.28.0
+
+# Note: Both reset_database.py and reset_database_simple.py now use
+# Firebase REST API instead of Admin SDK, so only 'requests' is needed!
+
