@@ -35,3 +35,4 @@ $PYTHON_CMD reset_database_simple.py
 echo ""
 read -p "Press Enter to continue..."
 
+

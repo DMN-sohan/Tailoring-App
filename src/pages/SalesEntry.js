@@ -40,8 +40,8 @@ const SalesEntry = () => {
       cusName: '',
       cusNumber: '',
       cusAddress: '',
-      embroideryLenghas: '',
-      dresses: '',
+      cusLehengas: '',
+      cusDress: '',
       blouses: '',
       petticoat: '',
     },
@@ -53,8 +53,8 @@ const SalesEntry = () => {
       cusName: '',
       cusNumber: '',
       cusAddress: '',
-      embroideryLenghas: '',
-      dresses: '',
+      cusLehengas: '',
+      cusDress: '',
       blouses: '',
       petticoat: '',
     };
@@ -95,8 +95,8 @@ const SalesEntry = () => {
           cusName: '',
           cusNumber: '',
           cusAddress: '',
-          embroideryLenghas: '',
-          dresses: '',
+          cusLehengas: '',
+          cusDress: '',
           blouses: '',
           petticoat: '',
         },
@@ -156,8 +156,8 @@ const SalesEntry = () => {
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Name</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Number</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Address</TableCell>
-                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Embroidery Lenghas</TableCell>
-                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Dresses</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Lehengas</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Dress</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Blouses</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Petticoat</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Actions</TableCell>
@@ -204,8 +204,8 @@ const SalesEntry = () => {
                       <TextField
                         fullWidth
                         size="small"
-                        value={row.embroideryLenghas}
-                        onChange={(e) => handleCellChange(row.id, 'embroideryLenghas', e.target.value)}
+                        value={row.cusLehengas}
+                        onChange={(e) => handleCellChange(row.id, 'cusLehengas', e.target.value)}
                         variant="standard"
                         InputProps={{ disableUnderline: true }}
                         sx={{ px: 1 }}
@@ -215,8 +215,8 @@ const SalesEntry = () => {
                       <TextField
                         fullWidth
                         size="small"
-                        value={row.dresses}
-                        onChange={(e) => handleCellChange(row.id, 'dresses', e.target.value)}
+                        value={row.cusDress}
+                        onChange={(e) => handleCellChange(row.id, 'cusDress', e.target.value)}
                         variant="standard"
                         InputProps={{ disableUnderline: true }}
                         sx={{ px: 1 }}

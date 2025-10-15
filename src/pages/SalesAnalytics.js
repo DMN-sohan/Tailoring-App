@@ -101,8 +101,8 @@ const SalesAnalytics = () => {
 
   const calculateAnalytics = (salesData) => {
     const itemBreakdown = {
-      'Embroidery Lenghas': 0,
-      'Dresses': 0,
+      'Cus Lehengas': 0,
+      'Cus Dress': 0,
       'Blouses': 0,
       'Petticoat': 0,
     };
@@ -111,13 +111,13 @@ const SalesAnalytics = () => {
 
     salesData.forEach((row) => {
       // Count items
-      if (row.embroideryLenghas) {
-        const count = parseFloat(row.embroideryLenghas) || 0;
-        itemBreakdown['Embroidery Lenghas'] += count;
+      if (row.cusLehengas) {
+        const count = parseFloat(row.cusLehengas) || 0;
+        itemBreakdown['Cus Lehengas'] += count;
       }
-      if (row.dresses) {
-        const count = parseFloat(row.dresses) || 0;
-        itemBreakdown['Dresses'] += count;
+      if (row.cusDress) {
+        const count = parseFloat(row.cusDress) || 0;
+        itemBreakdown['Cus Dress'] += count;
       }
       if (row.blouses) {
         const count = parseFloat(row.blouses) || 0;
@@ -134,8 +134,8 @@ const SalesAnalytics = () => {
           customerSales[row.cusName] = 0;
         }
         const totalItems = 
-          (parseFloat(row.embroideryLenghas) || 0) +
-          (parseFloat(row.dresses) || 0) +
+          (parseFloat(row.cusLehengas) || 0) +
+          (parseFloat(row.cusDress) || 0) +
           (parseFloat(row.blouses) || 0) +
           (parseFloat(row.petticoat) || 0);
         customerSales[row.cusName] += totalItems;
