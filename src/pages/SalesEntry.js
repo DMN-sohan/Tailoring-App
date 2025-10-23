@@ -40,9 +40,12 @@ const SalesEntry = () => {
       cusName: '',
       cusNumber: '',
       cusAddress: '',
-      cusLehengas: '',
+      cusLehengha: '',
+      saleLehengha: '',
       cusDress: '',
-      blouses: '',
+      saleDress: '',
+      cusBlouses: '',
+      saleBlouses: '',
       petticoat: '',
     },
   ]);
@@ -53,9 +56,12 @@ const SalesEntry = () => {
       cusName: '',
       cusNumber: '',
       cusAddress: '',
-      cusLehengas: '',
+      cusLehengha: '',
+      saleLehengha: '',
       cusDress: '',
-      blouses: '',
+      saleDress: '',
+      cusBlouses: '',
+      saleBlouses: '',
       petticoat: '',
     };
     setRows([...rows, newRow]);
@@ -95,9 +101,12 @@ const SalesEntry = () => {
           cusName: '',
           cusNumber: '',
           cusAddress: '',
-          cusLehengas: '',
+          cusLehengha: '',
+          saleLehengha: '',
           cusDress: '',
-          blouses: '',
+          saleDress: '',
+          cusBlouses: '',
+          saleBlouses: '',
           petticoat: '',
         },
       ]);
@@ -152,13 +161,16 @@ const SalesEntry = () => {
             <Table sx={{ minWidth: 800 }} size="small">
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#FAEAB1' }}>
-                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Sr. No.</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>S.No.</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Name</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Number</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Address</TableCell>
-                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Lehengas</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Lehengha</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Sale Lehengha</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Dress</TableCell>
-                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Blouses</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Sale Dress</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Cus Blouses</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Sale Blouses</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Petticoat</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', border: '1px solid #ddd' }}>Actions</TableCell>
                 </TableRow>
@@ -204,8 +216,19 @@ const SalesEntry = () => {
                       <TextField
                         fullWidth
                         size="small"
-                        value={row.cusLehengas}
-                        onChange={(e) => handleCellChange(row.id, 'cusLehengas', e.target.value)}
+                        value={row.cusLehengha}
+                        onChange={(e) => handleCellChange(row.id, 'cusLehengha', e.target.value)}
+                        variant="standard"
+                        InputProps={{ disableUnderline: true }}
+                        sx={{ px: 1 }}
+                      />
+                    </TableCell>
+                    <TableCell sx={{ border: '1px solid #ddd', p: 0 }}>
+                      <TextField
+                        fullWidth
+                        size="small"
+                        value={row.saleLehengha}
+                        onChange={(e) => handleCellChange(row.id, 'saleLehengha', e.target.value)}
                         variant="standard"
                         InputProps={{ disableUnderline: true }}
                         sx={{ px: 1 }}
@@ -226,8 +249,30 @@ const SalesEntry = () => {
                       <TextField
                         fullWidth
                         size="small"
-                        value={row.blouses}
-                        onChange={(e) => handleCellChange(row.id, 'blouses', e.target.value)}
+                        value={row.saleDress}
+                        onChange={(e) => handleCellChange(row.id, 'saleDress', e.target.value)}
+                        variant="standard"
+                        InputProps={{ disableUnderline: true }}
+                        sx={{ px: 1 }}
+                      />
+                    </TableCell>
+                    <TableCell sx={{ border: '1px solid #ddd', p: 0 }}>
+                      <TextField
+                        fullWidth
+                        size="small"
+                        value={row.cusBlouses}
+                        onChange={(e) => handleCellChange(row.id, 'cusBlouses', e.target.value)}
+                        variant="standard"
+                        InputProps={{ disableUnderline: true }}
+                        sx={{ px: 1 }}
+                      />
+                    </TableCell>
+                    <TableCell sx={{ border: '1px solid #ddd', p: 0 }}>
+                      <TextField
+                        fullWidth
+                        size="small"
+                        value={row.saleBlouses}
+                        onChange={(e) => handleCellChange(row.id, 'saleBlouses', e.target.value)}
                         variant="standard"
                         InputProps={{ disableUnderline: true }}
                         sx={{ px: 1 }}

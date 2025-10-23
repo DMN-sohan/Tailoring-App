@@ -70,6 +70,7 @@ const CustomerForm = () => {
     dress_shoulder: '',
     dress_armhole: '',
     dress_sleeves: 'Short',
+    dress_sleeves_input: '',
   });
 
   const loadCustomer = useCallback(async (customerId) => {
@@ -372,6 +373,15 @@ const CustomerForm = () => {
                   <MenuItem value="Full">Full</MenuItem>
                 </Select>
               </FormControl>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}>
+              <TextField 
+                fullWidth 
+                label="Sleeves" 
+                placeholder="Sleeves"
+                value={formData.dress_sleeves_input} 
+                onChange={handleChange('dress_sleeves_input')} 
+              />
             </Grid>
           </Grid>
 
